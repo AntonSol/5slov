@@ -27,3 +27,9 @@ function getRandomWord(words) {
   return words[randomIndex];
 }
 const slovo = getRandomWord(data.spisokSlov);
+function massivIzSlova(word) {
+  for (i = 0; i < word.length; i++) {
+    massivIzSlova.push(word[i]);
+  }
+}
+console.log(massivIzSlova(data.spisokSlov));

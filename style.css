@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+h1 {
+  color: #333;
+}
+.input_setting {
+  width: 50px; /* Задайте ширину и высоту такими же */
+  height: 50px;
+  border: 1px solid #ccc; /* Опционально: задайте границу для внешнего вида */
+  border-radius: 0; /* Отключите скругление углов */
+  padding: 5px; /* Опционально: добавьте немного отступов для внешнего вида */
+  box-sizing: border-box; /* Учитывайте границы в размере */
+}
