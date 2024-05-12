@@ -13,3 +13,12 @@ h1 {
   padding: 5px; /* Опционально: добавьте немного отступов для внешнего вида */
   box-sizing: border-box; /* Учитывайте границы в размере */
 }
+.confirm {
+  background-color: forestgreen;
+}
+.outOfPlace {
+  background-color: darkseagreen;
+}
+.empty {
+  background-color: darkslategrey;
+}

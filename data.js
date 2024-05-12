@@ -1,35 +1,42 @@
 data = {
-  spisokSlov: [
-    "плоть",
-    "весна",
-    "сталь",
-    "книга",
-    "ложка",
-    "музык",
-    "берег",
-    "город",
-    "леска",
-    "мячик",
-    "печка",
-    "рыбак",
-    "сонет",
-    "трава",
-    "узник",
-    "флаги",
-    "холод",
-    "цветы",
-    "часть",
-    "шумок",
-  ],
+  spisokSlov: ["книга", "слово"],
 };
+// рандом слово из списка
 function getRandomWord(words) {
   const randomIndex = Math.floor(Math.random() * words.length);
   return words[randomIndex];
 }
-const slovo = getRandomWord(data.spisokSlov);
-function massivIzSlova(word) {
-  for (i = 0; i < word.length; i++) {
-    massivIzSlova.push(word[i]);
-  }
-}
-console.log(massivIzSlova(data.spisokSlov));
+slovo = getRandomWord(data.spisokSlov);
+
+
+const inputs = document.querySelectorAll(".input_setting");
+const examinationButton = document.querySelector(".examinationButton");
+inputs.forEach((input, index) => {
+  input.addEventListener("input", (event) => {
+    if (input.value.length === 1) {
+      if (inputs[index + 1]) {
+        inputs[index].blur();
+        inputs[index + 1].focus();
+      }
+    }
+  });
+});
+
+examinationButton.addEventListener("click", () => {
+  resultWord = "";
+  inputs.forEach((input, index) => {
+    resultWord += input.value;
+    if (slovo[index] === input.value) {
+      input.classList.add("confirm");
+      return;
+    }
+    if (slovo.includes(input.value)) {
+      input.classList.add("outOfPlace");
+      return;
+    }
+    if (!slovo.includes(input.value)) {
+      input.classList.add("empty");
+      return;
+    }
+  });
+});
