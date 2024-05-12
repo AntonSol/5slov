@@ -5,20 +5,29 @@ body {
 h1 {
   color: #333;
 }
-.input_setting {
+.input_setting1,
+.input_setting2,
+.input_setting3,
+.input_setting4,
+.input_setting5 {
   width: 50px; /* Задайте ширину и высоту такими же */
   height: 50px;
-  border: 1px solid #ccc; /* Опционально: задайте границу для внешнего вида */
-  border-radius: 0; /* Отключите скругление углов */
+  border: 1px solid #030000; /* Опционально: задайте границу для внешнего вида */
+  border-radius: 5px; /* Отключите скругление углов */
   padding: 5px; /* Опционально: добавьте немного отступов для внешнего вида */
   box-sizing: border-box; /* Учитывайте границы в размере */
+  text-align: center;
+  font-size: 26px;
 }
 .confirm {
-  background-color: forestgreen;
+  background-color: rgb(250, 246, 8);
 }
 .outOfPlace {
-  background-color: darkseagreen;
+  background-color: rgb(117, 226, 117);
 }
 .empty {
-  background-color: darkslategrey;
+  background-color: rgb(245, 90, 98);
+}
+div {
+  padding: 5px;
 }
